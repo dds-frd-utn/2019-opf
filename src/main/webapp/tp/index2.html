@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Banco OPF!</h1>
+        <h2>Forma de uso</h2>
+        <h3>Descripcion de estructura y metodos</h3>
+        <p>El servicio está dividido "sub servicios":</p><br>
+        <ul>
+            <li>ClientesRest         localhost:26910/opf1/rest/clientes</li>
+            <li>CuentaRest           localhost:26910/opf1/rest/cuenta</li>
+            <li>BancoRest            localhost:26910/opf1/rest/banco</li>
+            <li>BonoRest             localhost:26910/opf1/rest/bono</li>
+            <li>TransaccionesRest    localhost:26910/opf1/rest/tr</li>
+            <li>Transaccionentrante  localhost:26910/opf1/rest/te</li>
+            <li>Transaccionsaliente  localhost:26910/opf1/rest/ts</li>
+        </ul><br>
+        <p>Cada servicio consta de los siguientes metodos</p>
+        <ul>
+            <li>CiudadanosRest @GET,@POST,@PUT,@DELETE</li>
+            <li>CuentaRest @GET,@POST,@PUT,@DELETE</li>
+            <li>BancoRest @GET,@POST,@PUT,@DELETE</li>
+            <li>BonoRest @GET,@POST,@PUT,@DELETE</li>            
+            <li>InversionRest @GET,@POST,@PUT,@DELETE</li>
+            <li>TransaccionesRest @GET,@POST,@PUT,@DELETE</li>
+            <li>Transaccionentrante @GET,@POST,@PUT,@DELETE</li>
+            <li>Transaccionsaliente @GET,@POST,@PUT,@DELETE</li>            
+        </ul><br>
+
+        <h3>Adicion de un cliente:</h3>
+        <p>JSON = {"direccion":<i>string)</i>,"estadoCrediticio":<i>int</i>,"fechaNacimientp":<i>date</i>,"id":<i>int</i>,"nombre":<i>string</i>}</p><br>
+        <h3>Creacion de una cuenta:</h3>
+        <p>JSON = {"id":<i>int</i>,"idBanco":<i>string</i>,"idCiudadano":<i>string</i>,"saldo":<i>float</i>,"nombre":<i>string</i>,"clave":<i>string</i>}</p><br>
+        <h3>Creacion de una transaccion:</h3>
+        <p>JSON = {"cuentaOrigen":<i>string</i>,"cuentaDestino":<i>string</i>,"importe": <i>float</i>,"fechaInicio":<i>date</i>,"fechaFin":<i>date</i>,"estado":<i>String</i>,"tipo":<i>string</i>}</p><br>
+    </body>
+</html>
